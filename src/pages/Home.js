@@ -1,19 +1,11 @@
-import React from "react";
+import React from 'react';
+import Sidebar from '../components/Sidebar'
 
 
 export default function Home() {
     return (
         <>
-            <div class="sidebar">
-                <a class="active" href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-            </div>
-
-            <div class="content">
-                <h1>Tolulope Joel</h1>
-            </div>
+            <Sidebar />
         </>
     )
 }
