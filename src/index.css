@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #212529;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,12 +13,21 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* The side navigation menu */
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+  width: 270px;
+  background-color: #fff;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -47,7 +57,7 @@ code {
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-  margin-left: 200px;
+  margin-left: 300px;
   padding: 1px 16px;
   height: 1000px;
 }
@@ -61,7 +71,7 @@ div.content {
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   .sidebar {
     width: 100%;
     height: auto;
