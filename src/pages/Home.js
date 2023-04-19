@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <div>
             <Sidebar />
-            <div className="content bg-dark text-white">
+            <div className="content">
                 <div className="page-name">
                     <h1>Home</h1>
                 </div>
@@ -28,7 +28,7 @@ export default function Home() {
                                 <div className="card bg-dark border-white h-100">
                                     <img className="card-img-top" src={product.image} alt="Card image cap" height="400px" width="500px" />
                                     <div className="card-body">
-                                        <h5 className="card-title"><a href=''>{product.name}</a></h5>
+                                        <h5 className="card-title"><a href={`/products/${product.slug}/`}>{product.name}</a></h5>
                                         <p class="card-text">{(product.creator.username)}</p>
                                     </div>
                                     <div className="card-footer border-white">
