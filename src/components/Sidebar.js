@@ -8,7 +8,7 @@ export default function Sidebar() {
                 <div className="logo">
                     <a href=""><h1>Slime Road</h1></a>
                 </div>
-                <a href='' className="active">Home</a>
+                <a href='/shop/' className="active">Shop</a>
                 <a href=''>Products</a>
                 <a href=''>Library</a>
                 <a href=''>Payouts</a>

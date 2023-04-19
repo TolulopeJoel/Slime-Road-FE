@@ -3,11 +3,11 @@ import Sidebar from '../components/Sidebar'
 import { apiWithoutToken } from '../components/Api'
 
 
-export default function Home() {
+export default function Shop() {
     const [products, setProducts] = useState();
 
     useEffect(() => {
-        apiWithoutToken.get('/products/',)
+        apiWithoutToken.get('/products/')
             .then((response) => {
                 setProducts(response.data);
             }).catch(error => console.log(error));
@@ -18,7 +18,7 @@ export default function Home() {
             <Sidebar />
             <div className="content">
                 <div className="page-name">
-                    <h1>Home</h1>
+                    <h1>Shop</h1>
                 </div>
 
                 <div className='my-5'>

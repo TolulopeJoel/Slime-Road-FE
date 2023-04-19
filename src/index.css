@@ -20,6 +20,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: inherit;
 }
 
 /* The side navigation menu */
@@ -60,6 +61,7 @@ div.content {
   margin-left: 300px;
   padding: 1px 16px;
   height: 1000px;
+  color: #ffffff;
 }
 
 .page-name {
