@@ -9,7 +9,7 @@ export default function Sidebar() {
                     <a href=""><h1>Slime Road</h1></a>
                 </div>
                 <a href='/shop/' className="active">Shop</a>
-                <a href=''>Products</a>
+                <a href='/products/'>Products</a>
                 <a href=''>Library</a>
                 <a href='/payouts/'>Payouts</a>
             </div>

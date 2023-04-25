@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Payout from './pages/Payout';
 import ProductDetail from './pages/ProductDetail';
 import Shop from './pages/Shop';
+import UserProducts from './pages/UserProducts';
 import SignIn from './pages/Auth/SigIn';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route path='shop/' element={<Shop />} />
+      <Route path='products/' element={<UserProducts />} />
       <Route path='login/' element={<SignIn />} />
       <Route path='payouts/' element={<Payout />} />
       <Route path='products/:productSlug/' element={<ProductDetail />} />

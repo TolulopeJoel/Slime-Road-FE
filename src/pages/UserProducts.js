@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
-import { apiWithoutToken } from '../components/Api';
+import api from '../components/Api';
 import ProductCard from '../components/ProductCard';
 
-export default function Shop() {
+export default function UserProduct() {
     const [products, setProducts] = useState();
 
     useEffect(() => {
-        apiWithoutToken.get('/shop/')
+        api.get('/auth/user/products/')
             .then((response) => {
                 setProducts(response.data);
             }).catch(error => console.log(error));
@@ -18,7 +18,7 @@ export default function Shop() {
             <Sidebar />
             <div className="content">
                 <div className="page-name">
-                    <h1>Shop</h1>
+                    <h1>Products</h1>
                 </div>
 
                 <div className='my-5'>
