@@ -11,7 +11,7 @@ export default function Sidebar() {
                 <a href='/shop/' className="active">Shop</a>
                 <a href=''>Products</a>
                 <a href=''>Library</a>
-                <a href=''>Payouts</a>
+                <a href='/payouts/'>Payouts</a>
             </div>
         </>
     )
