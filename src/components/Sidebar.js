@@ -23,7 +23,7 @@ export default function Sidebar({ activeLink }) {
                     Products
                 </a>
                 <a
-                    href=""
+                    href="/library/"
                     className={activeLink === "/library/" ? "active" : ""}
                 >
                     Library
