@@ -15,7 +15,7 @@ export default function Shop() {
 
     return (
         <div>
-            <Sidebar />
+            <Sidebar activeLink='/shop/' />
             <div className="content">
                 <div className="page-name">
                     <h1>Shop</h1>

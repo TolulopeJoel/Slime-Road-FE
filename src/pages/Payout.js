@@ -21,7 +21,7 @@ export default function Payout() {
 
     return (
         <div>
-            <Sidebar />
+            <Sidebar activeLink='/payouts/' />
             <div className='content'>
                 <div className='page-name'>
                     <h1>Payouts</h1>

@@ -8,7 +8,7 @@ export default function ProductDetail() {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        apiWithoutToken.get(`/products/${productSlug}`)
+        apiWithoutToken.get(`/shop/${productSlug}`)
             .then((response) => {
                 setProduct(response.data);
             }).catch((error) => {
@@ -23,7 +23,7 @@ export default function ProductDetail() {
 
     return (
         <>
-            <Sidebar />
+            <Sidebar activeLink='/shop/' />
             <div className="content">
                 <div className="page-name">
                     <h1>{product.name}</h1>

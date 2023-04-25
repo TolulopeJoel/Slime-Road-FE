@@ -15,7 +15,7 @@ export default function UserProduct() {
 
     return (
         <div>
-            <Sidebar />
+            <Sidebar activeLink='/products/' />
             <div className="content">
                 <div className="page-name">
                     <h1>Products</h1>
