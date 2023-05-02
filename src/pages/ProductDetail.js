@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Sidebar from '../components/Sidebar';
-import api, { apiWithoutToken } from '../components/Api';
+import { apiWithoutToken } from '../components/Api';
 
 export default function ProductDetail() {
     const { productSlug } = useParams();
@@ -27,7 +27,7 @@ export default function ProductDetail() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await api.post("/orders/", {
+            await apiWithoutToken.post("/orders/", {
                 product_id: product.id,
                 email,
                 price
@@ -89,6 +89,7 @@ export default function ProductDetail() {
                                 {fieldErrors.price && (<div className="text-danger w-100">{fieldErrors.price}</div>)}
                                 <input
                                     type="number"
+                                    step="0.01"
                                     className="form-control bg-dark p-3 text-white my-4"
                                     id="price"
                                     name="price"

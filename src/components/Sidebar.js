@@ -6,7 +6,7 @@ export default function Sidebar({ activeLink }) {
         <>
             <div className="sidebar border border-1 border-dark">
                 <div className="logo">
-                    <a href="">
+                    <a href="/">
                         <h1>Slime Road</h1>
                     </a>
                 </div>
