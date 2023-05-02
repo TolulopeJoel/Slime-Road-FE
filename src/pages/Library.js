@@ -25,7 +25,7 @@ export default function Library() {
                 <div className='my-5'>
                     <div className='row row-cols-1 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3'>
                         {products && products.map(product => (
-                            <ProductCard key={product.id} product={product} />
+                            <ProductCard key={product.id} product={product} source='library' />
                         ))}
                     </div>
                 </div>

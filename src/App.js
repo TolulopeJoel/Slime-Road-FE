@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Payout from './pages/Payout';
 import ProductDetail from './pages/ProductDetail';
+import BoughtProductDetail from './pages/BoughtProductDetail';
 import Shop from './pages/Shop';
 import UserProducts from './pages/UserProducts';
 import Library from './pages/Library';
@@ -18,6 +19,7 @@ function App() {
       <Route path='login/' element={<SignIn />} />
       <Route path='payouts/' element={<Payout />} />
       <Route path='products/:productSlug/' element={<ProductDetail />} />
+      <Route path='library/:productSlug/' element={<BoughtProductDetail />} />
       </Routes>
     </BrowserRouter>
   );
