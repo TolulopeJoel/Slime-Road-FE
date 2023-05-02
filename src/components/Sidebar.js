@@ -34,6 +34,12 @@ export default function Sidebar({ activeLink }) {
                 >
                     Payouts
                 </a>
+                <a
+                    href="/settings/"
+                    className={activeLink === "/settings/" ? "active" : ""}
+                >
+                    Settings
+                </a>
             </div>
         </>
     );
