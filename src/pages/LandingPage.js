@@ -36,7 +36,7 @@ export default function Home() {
                                 <h1 className="display-4"><b>Welcome to Slime Road</b></h1>
                                 <p className="lead">The Ultimate Platform for Digital Creators!</p>
                                 <p>Slime Road is an easy-to-use digital application that enables creators to sell their digital products directly to their audience. With Slime Road, creators can showcase their products in a customizable storefront and sell them securely to customers across the globe.</p>
-                                <a href="/signup" className="btn btn-success p-3">Start Selling</a>
+                                <a href="/shop" className="btn btn-success p-3">Visit Shop</a>
                             </div>
                         </div>
                         <div className="col-md-6">

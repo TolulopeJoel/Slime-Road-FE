@@ -38,7 +38,7 @@ api.interceptors.response.use(
         .post(`${apiBaseURL}/auth/token/refresh/`, { refresh: refreshToken })
         .then((response) => {
           // Update the access token in local storage
-          localStorage.setItem("access_token", response.data.acess);
+          localStorage.setItem("access_token", response.data.access);
           // Retry the original request with the new access token
           const config = error.config;
           config.headers["Authorization"] = `Bearer ${response.data.access}`;
