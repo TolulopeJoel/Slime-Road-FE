@@ -114,8 +114,8 @@ export default function Settings() {
                                     />
                                 </div>
 
-                                <div class="my-4">
-                                    <label for="formFile" class="form-label">Product image:</label>
+                                <div className="my-4">
+                                    <label for="formFile" className="form-label">Product image:</label>
                                     <input
                                         type="file"
                                         id="formFile"

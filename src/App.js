@@ -9,11 +9,13 @@ import UserProducts from './pages/UserProducts';
 import Library from './pages/Library';
 import SignIn from './pages/Auth/SigIn';
 import Settings from './pages/Settings';
+import Home from './pages/LandingPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route index element={<Home />} />
       <Route path='shop/' element={<Shop />} />
       <Route path='products/' element={<UserProducts />} />
       <Route path='library/' element={<Library />} />
