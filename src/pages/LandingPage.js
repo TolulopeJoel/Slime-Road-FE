@@ -28,8 +28,8 @@ export default function Home() {
             </nav>
 
             {/* <!-- Main content --> */}
-            <main>
-                <div className="container my-5">
+            <main className="bg-white pt-5">
+                <div className="container">
                     <div className="row">
                         <div className="col-md-6 d-flex align-items-center">
                             <div className="">
