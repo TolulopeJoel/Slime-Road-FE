@@ -5,14 +5,25 @@ import ProductCard from '../components/ProductCard';
 
 export default function Library() {
     const [products, setProducts] = useState();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         api.get('/auth/user/library/')
             .then((response) => {
-                console.log(response);
+                setLoading(false);
                 setProducts(response.data);
             }).catch(error => console.log(error));
     }, []);
+
+    if (loading) {
+        return (
+            <div className="loading">
+                <div className="spinner-border text-success" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div>

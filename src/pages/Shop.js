@@ -6,12 +6,25 @@ import ProductCard from '../components/ProductCard';
 export default function Shop() {
     const [products, setProducts] = useState();
 
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         apiWithoutToken.get('/shop/')
             .then((response) => {
+                setLoading(false);
                 setProducts(response.data);
             }).catch(error => console.log(error));
     }, []);
+
+    if (loading) {
+        return (
+            <div className="loading">
+                <div className="spinner-border text-success" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div>

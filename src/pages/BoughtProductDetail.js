@@ -7,17 +7,31 @@ export default function BoughtProductDetail() {
     const { productSlug } = useParams();
     const [product, setProduct] = useState(null);
 
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         apiWithoutToken.get(`/shop/${productSlug}`)
             .then((response) => {
+                setLoading(false);
                 setProduct(response.data);
             }).catch((error) => {
+                setLoading(false);
                 console.error(error);
             });
     }, [productSlug]);
 
     if (!product) {
         return <div><h3>Product is not available.</h3></div>;
+    }
+
+    if (loading) {
+        return (
+            <div className="loading">
+                <div className="spinner-border text-success" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
     }
 
 

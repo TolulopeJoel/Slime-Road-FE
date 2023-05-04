@@ -23,6 +23,20 @@ a:hover {
   color: inherit;
 }
 
+/* The loader */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading .spinner-border {
+  width: 4rem;
+  height: 4rem;
+}
+
+
 /* The side navigation menu */
 .sidebar {
   margin: 0;

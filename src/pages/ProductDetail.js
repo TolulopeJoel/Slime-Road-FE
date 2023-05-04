@@ -12,14 +12,17 @@ export default function ProductDetail() {
 
     const [fieldErrors, setfieldErrors] = useState({});
     const [otherErrors, setotherErrors] = useState({});
+    const [loading, setLoading] = useState(true);
 
     const navigate = useNavigate();
 
     useEffect(() => {
         apiWithoutToken.get(`/shop/${productSlug}`)
             .then((response) => {
+                setLoading(false);
                 setProduct(response.data);
             }).catch((error) => {
+                setLoading(false);
                 console.error(error);
             });
     }, [productSlug]);
@@ -48,6 +51,16 @@ export default function ProductDetail() {
 
     if (!product) {
         return <div><h3>Product is not available.</h3></div>;
+    }
+
+    if (loading) {
+        return (
+            <div className="loading">
+                <div className="spinner-border text-success" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
     }
 
 

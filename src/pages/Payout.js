@@ -6,18 +6,31 @@ import api from '../components/Api'
 export default function Payout() {
     const [earnings, setEarnings] = useState({});
     const [orders, setOrders] = useState();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         api.get('/payouts/')
             .then((response) => {
+                setLoading(false);
                 setEarnings(response.data);
             }).catch(error => console.log(error));
 
         api.get('/orders/')
             .then((response) => {
+                setLoading(false);
                 setOrders(response.data);
             }).catch(error => console.log(error));
     }, []);
+
+    if (loading) {
+        return (
+            <div className="loading">
+                <div className="spinner-border text-success" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div>
