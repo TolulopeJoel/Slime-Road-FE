@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const apiBaseURL = "https://slime-road.up.railway.app/api/"
+const apiBaseURL = "https://slime-road.onrender.com/api/"
 
 const api = axios.create({
   baseURL: apiBaseURL,
